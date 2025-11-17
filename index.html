@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishwashauryam Defence Club - Event Registration | VIT Pune</title>
+    <meta name="description" content="Register for Vishwashauryam Defence Club events at VIT Pune. Join us for military-themed activities and leadership training.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="insignia">★</div>
+                <div class="club-info">
+                    <h1>VISHWASHAURYAM</h1>
+                    <p>Defence Club | VIT Pune</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">SPECIAL EVENT</div>
+            <h2 class="hero-title">OPERATION SHAURYA 2025</h2>
+            <div class="hero-details">
+                <div class="detail-item">
+                    <span class="detail-icon">📅</span>
+                    <span>March 15, 2025</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">📍</span>
+                    <span>VIT Pune Campus Auditorium</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">⏰</span>
+                    <span>09:00 AM - 05:00 PM</span>
+                </div>
+            </div>
+            <p class="hero-description">
+                Join us for an immersive day of military strategy, leadership workshops, 
+                and interactive sessions with defence experts. Experience the discipline, 
+                valor, and strategic thinking that defines our armed forces.
+            </p>
+        </div>
+    </section>
+
+    <!-- Event Information -->
+    <section class="event-info">
+        <div class="container">
+            <h2 class="section-title">EVENT HIGHLIGHTS</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Strategic Workshops</h3>
+                    <p>Learn military strategy, tactical planning, and decision-making under pressure from experienced professionals.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">🎖️</div>
+                    <h3>Guest Speakers</h3>
+                    <p>Interact with retired military officers and defence experts sharing real-world experiences and insights.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Team Challenges</h3>
+                    <p>Participate in team-building exercises designed to test leadership, coordination, and problem-solving skills.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Career Guidance</h3>
+                    <p>Get insights into defence career opportunities including NDA, CDS, AFCAT, and technical entry schemes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="registration">
+        <div class="container">
+            <h2 class="section-title">MISSION REGISTRATION</h2>
+            <p class="section-subtitle">Secure your position. Limited slots available.</p>
+            
+            <form id="registrationForm" class="registration-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="college">College/University *</label>
+                        <input type="text" id="college" name="college" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="branch">Branch/Department *</label>
+                        <input type="text" id="branch" name="branch" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year of Study *</label>
+                        <select id="year" name="year" required>
+                            <option value="">Select Year</option>
+                            <option value="1">First Year</option>
+                            <option value="2">Second Year</option>
+                            <option value="3">Third Year</option>
+                            <option value="4">Fourth Year</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ticketType">Ticket Type *</label>
+                        <select id="ticketType" name="ticketType" required>
+                            <option value="">Select Ticket Type</option>
+                            <option value="student">Student - ₹200</option>
+                            <option value="faculty">Faculty - ₹500</option>
+                            <option value="external">External Participant - ₹800</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="requirements">Special Requirements (Optional)</label>
+                    <textarea id="requirements" name="requirements" rows="4" placeholder="Dietary restrictions, accessibility needs, etc."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>REGISTER NOW</span>
+                </button>
+
+                <div id="message" class="message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vishwashauryam Defence Club, VIT Pune. All rights reserved.</p>
+            <p>For queries: contact@vishwashauryam.com | +91-XXXXXXXXXX</p>
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
