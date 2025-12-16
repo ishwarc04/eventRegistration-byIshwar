@@ -18,14 +18,40 @@
                     <p>Defence Club | VIT Pune</p>
                 </div>
             </div>
+            
+            <!-- Navigation -->
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">HOME</a></li>
+                    <li><a href="#event-info" class="nav-link">EVENT HIGHLIGHTS</a></li>
+                    <li><a href="#registration" class="nav-link">REGISTER</a></li>
+                    <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
         </div>
     </header>
 
+    <!-- Success Message Banner -->
+    <div id="successBanner" class="success-banner">
+        <div class="container">
+            <div class="success-content">
+                <span class="success-icon">🎖️</span>
+                <span class="success-text">Registration Successful! Welcome to Operation Shaurya 2025!</span>
+                <button class="close-banner" onclick="closeBanner()">×</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero"></section>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <div class="hero-badge">SPECIAL EVENT</div>
+           
             <h2 class="hero-title">OPERATION SHAURYA 2025</h2>
             <div class="hero-details">
                 <div class="detail-item">
@@ -46,11 +72,15 @@
                 and interactive sessions with defence experts. Experience the discipline, 
                 valor, and strategic thinking that defines our armed forces.
             </p>
+            <div class="hero-actions">
+                <a href="#registration" class="cta-button primary">REGISTER NOW</a>
+                <a href="#event-info" class="cta-button secondary">VIEW DETAILS</a>
+            </div>
         </div>
     </section>
 
     <!-- Event Information -->
-    <section class="event-info">
+    <section id="event-info" class="event-info"></section>
         <div class="container">
             <h2 class="section-title">EVENT HIGHLIGHTS</h2>
             <div class="info-grid">
@@ -58,28 +88,45 @@
                     <div class="card-icon">🎯</div>
                     <h3>Strategic Workshops</h3>
                     <p>Learn military strategy, tactical planning, and decision-making under pressure from experienced professionals.</p>
+                    <div class="card-time">10:00 AM - 12:00 PM</div>
                 </div>
                 <div class="info-card">
                     <div class="card-icon">🎖️</div>
                     <h3>Guest Speakers</h3>
                     <p>Interact with retired military officers and defence experts sharing real-world experiences and insights.</p>
+                    <div class="card-time">12:30 PM - 02:00 PM</div>
                 </div>
                 <div class="info-card">
                     <div class="card-icon">🏆</div>
                     <h3>Team Challenges</h3>
                     <p>Participate in team-building exercises designed to test leadership, coordination, and problem-solving skills.</p>
+                    <div class="card-time">02:30 PM - 04:00 PM</div>
                 </div>
                 <div class="info-card">
                     <div class="card-icon">📚</div>
                     <h3>Career Guidance</h3>
                     <p>Get insights into defence career opportunities including NDA, CDS, AFCAT, and technical entry schemes.</p>
+                    <div class="card-time">04:00 PM - 05:00 PM</div>
                 </div>
+                <div class="info-card">
+                    <div class="card-icon">🚁</div>
+                    <h3>Equipment Display</h3>
+                    <p>Explore military equipment displays, tactical gear demonstrations, and interactive technology showcases.</p>
+                    <div class="card-time">09:00 AM - 05:00 PM</div>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">🎖️</div>
+                    <h3>Honor Ceremony</h3>
+                    <p>Special recognition ceremony for outstanding participants and presentation of certificates and awards.</p>
+                    <div class="card-time">04:30 PM - 05:00 PM</div>
+                </div>
+                
             </div>
         </div>
     </section>
 
     <!-- Registration Form -->
-    <section class="registration">
+    <section id="registration" class="registration"></section>
         <div class="container">
             <h2 class="section-title">MISSION REGISTRATION</h2>
             <p class="section-subtitle">Secure your position. Limited slots available.</p>
@@ -151,10 +198,35 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="container">
-            <p>&copy; 2025 Vishwashauryam Defence Club, VIT Pune. All rights reserved.</p>
-            <p>For queries: contact@vishwashauryam.com | +91-XXXXXXXXXX</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>📧 contact@vishwashauryam.com</p>
+                    <p>📞 +91-9876543210</p>
+                    <p>📍 VIT Pune Campus, Maharashtra</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#event-info">Event Highlights</a></li>
+                        <li><a href="#registration">Registration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vishwashauryam Defence Club, VIT Pune. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 

@@ -6,14 +6,20 @@ import { getAuth, signInAnonymously } from 'https://www.gstatic.com/firebasejs/1
 
 // Firebase configuration object
 // REPLACE WITH YOUR FIREBASE CONFIG
-const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD59lqW6y2UUMQTRzyCxv9NB4fwGwEFB24",
+    authDomain: "vishwashauryam-vit.firebaseapp.com",
+    projectId: "vishwashauryam-vit",
+    storageBucket: "vishwashauryam-vit.firebasestorage.app",
+    messagingSenderId: "454201610840",
+    appId: "1:454201610840:web:ea038fba38daa9876c302d",
+    measurementId: "G-FCCFG6L4Y5"
+  };
+
+
+
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -65,6 +71,9 @@ registrationForm.addEventListener('submit', async (e) => {
         
         // Show success message
         showMessage('success', `Registration successful! Your registration ID is: ${docRef.id.substring(0, 8).toUpperCase()}`);
+        
+        // Show success banner
+        showSuccessBanner();
         
         // Reset form
         registrationForm.reset();
@@ -147,3 +156,90 @@ document.addEventListener('DOMContentLoaded', () => {
     // Log initialization
     console.log('Vishwashauryam Defence Club - Registration System Initialized');
 });
+
+// ===== NAVIGATION FUNCTIONALITY =====
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = target.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Active navigation highlighting
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 150;
+            if (window.pageYOffset >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
+
+// ===== SUCCESS BANNER FUNCTIONALITY =====
+function showSuccessBanner() {
+    const banner = document.getElementById('successBanner');
+    const body = document.body;
+    
+    if (banner) {
+        banner.classList.add('show');
+        body.style.paddingTop = '150px'; // Adjust for banner height
+        
+        // Auto-hide after 8 seconds
+        setTimeout(() => {
+            closeBanner();
+        }, 8000);
+    }
+}
+
+function closeBanner() {
+    const banner = document.getElementById('successBanner');
+    const body = document.body;
+    
+    if (banner) {
+        banner.classList.remove('show');
+        body.style.paddingTop = '100px'; // Reset to normal header height
+    }
+}
+
+// Make closeBanner available globally
+window.closeBanner = closeBanner;
